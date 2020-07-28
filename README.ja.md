@@ -2,9 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/07888756-8bfc-4e40-b0bc-323123e57e8c/deploy-status)](https://app.netlify.com/sites/free-karaage-foundation/deploys)
 
-Free Karaage Foundation (FKF) is support the Free Karaage Movement.
-
-このファイルの内容の一部は[日本語](README.ja.md)でご覧になれます。
+自由からあげ財団は、自由からあげ運動を支援しています。
 
 ## Development
 
