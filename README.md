@@ -6,6 +6,9 @@ Free Karaage Foundation (FKF) is support the Free Karaage Movement.
 
 このファイルの内容の一部は[日本語](README.ja.md)でご覧になれます。
 
+## Website
+[Free Karaage Foundation](https://free-karaage.foundation/)
+
 ## Development
 
 ```bash
