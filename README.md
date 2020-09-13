@@ -17,3 +17,11 @@ yarn build
 ```
 
 For more details, please head VuePress's [documentation](https://v1.vuepress.vuejs.org/).
+
+## Program License
+
+MIT License
+
+## Document License
+
+CC BY-SA 4.0
