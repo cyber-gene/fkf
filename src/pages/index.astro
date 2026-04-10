@@ -1,0 +1,296 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="自由から揚げ財団">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-cream-100/90 backdrop-blur-sm border-b border-cream-200">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-2xl">🍗</span>
+        <span class="font-serif font-bold text-brown-900 text-sm tracking-wide">自由から揚げ財団</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown-700">
+        <a href="#freedoms" class="hover:text-karaage-gold transition-colors">四つの自由</a>
+        <a href="#manifesto" class="hover:text-karaage-gold transition-colors">宣言</a>
+        <a href="#about" class="hover:text-karaage-gold transition-colors">概要</a>
+        <a href="#join" class="bg-karaage-gold text-white px-4 py-2 rounded-full hover:bg-karaage-dark transition-colors">参加する</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-karaage-light/10 blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-karaage-amber/10 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <div class="inline-block bg-karaage-gold/10 border border-karaage-gold/30 text-karaage-dark text-xs font-medium px-4 py-1.5 rounded-full mb-8 tracking-widest uppercase">
+        自由から揚げ運動
+      </div>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold text-brown-900 leading-tight mb-6">
+        から揚げを、<br class="hidden md:block" />
+        <span class="text-karaage-gold">自由に。</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-brown-700 font-light leading-relaxed mb-4 max-w-2xl mx-auto">
+        レモンをかけるかどうかは、あなたが決める。
+      </p>
+      <p class="text-base md:text-lg text-brown-600 leading-relaxed mb-12 max-w-2xl mx-auto">
+        自由から揚げ財団は、すべての人があらゆる制約から解放され、
+        から揚げを自由に楽しむ権利を守るために設立されました。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#freedoms" class="bg-karaage-gold text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-karaage-dark transition-all hover:shadow-lg hover:shadow-karaage-gold/20 hover:-translate-y-0.5">
+          四つの自由を読む
+        </a>
+        <a href="#manifesto" class="border-2 border-brown-800 text-brown-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-brown-800 hover:text-cream-100 transition-all">
+          自由から揚げ宣言
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-brown-400 text-xs">
+      <span>スクロール</span>
+      <div class="w-px h-12 bg-gradient-to-b from-brown-400 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- Four Freedoms -->
+  <section id="freedoms" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-karaage-gold font-medium tracking-widest uppercase text-sm mb-4">The Four Freedoms</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-brown-900 mb-6">自由から揚げの四つの自由</h2>
+        <p class="text-brown-600 text-lg max-w-2xl mx-auto">
+          自由から揚げ財団は、から揚げを真に自由に楽しむために必要な、四つの本質的な自由を定義しました。
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="group bg-cream-50 border border-cream-200 rounded-3xl p-8 hover:border-karaage-gold/50 hover:shadow-xl hover:shadow-karaage-gold/5 transition-all duration-300">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-karaage-gold/10 flex items-center justify-center text-2xl font-serif font-bold text-karaage-gold">
+              0
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-bold text-brown-900 mb-3">食べ方を選ぶ自由</h3>
+              <p class="text-brown-600 leading-relaxed">
+                から揚げをどのように食べるかを自由に選ぶ権利。
+                レモンをかけるかどうか、ポン酢で食べるか、何もつけずに食べるか——
+                それはあなた自身が決めることであり、いかなる第三者もその選択を侵してはならない。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-cream-50 border border-cream-200 rounded-3xl p-8 hover:border-karaage-gold/50 hover:shadow-xl hover:shadow-karaage-gold/5 transition-all duration-300">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-karaage-gold/10 flex items-center justify-center text-2xl font-serif font-bold text-karaage-gold">
+              1
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-bold text-brown-900 mb-3">作り方を知る自由</h3>
+              <p class="text-brown-600 leading-relaxed">
+                から揚げの製法・材料・工程を知り、自分で再現する権利。
+                「秘伝のタレ」という名の不透明性を拒否し、
+                から揚げのレシピはオープンであるべきだ。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-cream-50 border border-cream-200 rounded-3xl p-8 hover:border-karaage-gold/50 hover:shadow-xl hover:shadow-karaage-gold/5 transition-all duration-300">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-karaage-gold/10 flex items-center justify-center text-2xl font-serif font-bold text-karaage-gold">
+              2
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-bold text-brown-900 mb-3">権威に惑わされない自由</h3>
+              <p class="text-brown-600 leading-relaxed">
+                から揚げ大賞、モンドセレクション、食べログランキング——
+                これらの権威的評価に盲目的に従うことを拒否する権利。
+                「うまいから揚げ」の定義は、あなたの舌が決める。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-cream-50 border border-cream-200 rounded-3xl p-8 hover:border-karaage-gold/50 hover:shadow-xl hover:shadow-karaage-gold/5 transition-all duration-300">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-karaage-gold/10 flex items-center justify-center text-2xl font-serif font-bold text-karaage-gold">
+              3
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-bold text-brown-900 mb-3">改良して共有する自由</h3>
+              <p class="text-brown-600 leading-relaxed">
+                から揚げを独自に改良し、その成果をコミュニティに還元する権利。
+                「から揚げはこうあるべき」という固定観念を打ち破り、
+                から揚げ文化を全員でアップデートし続ける。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section id="manifesto" class="py-24 px-6 bg-brown-900 text-cream-100">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-karaage-amber font-medium tracking-widest uppercase text-sm mb-4">Manifesto</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">自由から揚げ宣言</h2>
+      </div>
+
+      <div class="space-y-8 text-lg leading-relaxed text-cream-200 font-light">
+        <p>
+          人類がから揚げと出会って以来、そこには常に抑圧の歴史があった。
+          「レモンは先にかけるもの」という暗黙の圧力。権威ある賞を盾にした優劣の押しつけ。
+          「から揚げにマヨネーズは邪道だ」という根拠なき断定。
+        </p>
+        <p>
+          私たちはこれに異議を唱える。
+        </p>
+        <p>
+          から揚げとは本来、極めて自由な食べ物である。鶏の部位、下味の配合、衣の種類、揚げ油の温度、
+          そして食べ方——これらすべてにおいて、唯一の正解など存在しない。
+          存在するのは無数の「好み」と「文脈」と「その瞬間」だけだ。
+        </p>
+        <p>
+          自由から揚げ財団は宣言する。
+          <span class="text-karaage-amber font-medium">から揚げの自由は、普遍的な権利である。</span>
+        </p>
+        <p>
+          共に食卓を囲む者が「レモンかけてもいい？」と聞かずにレモンを絞ったとき、
+          それは単なるマナーの問題ではない。他者の自由への侵害である。
+          私たちはそのような行為を、穏やかに、しかし毅然として拒否する。
+        </p>
+        <p>
+          から揚げの未来は、開かれている。
+        </p>
+      </div>
+
+      <div class="mt-16 pt-12 border-t border-brown-700">
+        <p class="text-center text-karaage-amber text-sm tracking-widest uppercase font-medium">
+          自由から揚げ財団、設立 2024
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6 bg-cream-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-karaage-gold font-medium tracking-widest uppercase text-sm mb-4">About</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-brown-900 mb-8">財団について</h2>
+          <div class="space-y-6 text-brown-600 leading-relaxed text-lg">
+            <p>
+              自由から揚げ財団は、自由から揚げ運動を推進するために設立された
+              非営利団体です。自由ソフトウェア財団（FSF）の精神に着想を得て、
+              デジタルの自由ならぬ、食卓の自由を守るために活動しています。
+            </p>
+            <p>
+              私たちは特定のから揚げスタイルを推奨しません。
+              から揚げの楽しみ方に正解はなく、それぞれの自由な選択こそが
+              豊かなから揚げ文化を作ると信じています。
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white rounded-3xl p-6 border border-cream-200">
+            <p class="text-4xl font-serif font-bold text-karaage-gold mb-2">4</p>
+            <p class="text-brown-700 font-medium">本質的な自由</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 border border-cream-200">
+            <p class="text-4xl font-serif font-bold text-karaage-gold mb-2">∞</p>
+            <p class="text-brown-700 font-medium">から揚げの可能性</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 border border-cream-200">
+            <p class="text-4xl font-serif font-bold text-karaage-gold mb-2">0</p>
+            <p class="text-brown-700 font-medium">強制されたレモン</p>
+          </div>
+          <div class="bg-karaage-gold rounded-3xl p-6">
+            <p class="text-4xl font-serif font-bold text-white mb-2">🍗</p>
+            <p class="text-white font-medium">自由なから揚げ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section id="join" class="py-24 px-6 bg-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-karaage-gold font-medium tracking-widest uppercase text-sm mb-4">Join Us</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-brown-900 mb-6">
+        自由から揚げ運動に<br />参加しよう
+      </h2>
+      <p class="text-brown-600 text-lg leading-relaxed mb-12">
+        から揚げの自由を守るために、今日から行動を始めましょう。
+        まずは身近なところから——次のから揚げは、自分の好きなように食べてみてください。
+      </p>
+      <div class="bg-cream-50 border border-cream-200 rounded-3xl p-8 text-left space-y-4">
+        <h3 class="font-serif text-xl font-bold text-brown-900">今日からできること</h3>
+        <ul class="space-y-3">
+          {[
+            'レモンをかける前に隣の人に一言確認する',
+            'から揚げ大賞の結果より自分の舌を信じる',
+            '「から揚げにXXは邪道」という発言を見かけたら穏やかに異議を唱える',
+            '好きなから揚げレシピをオープンに共有する',
+          ].map((item) => (
+            <li class="flex items-start gap-3 text-brown-600">
+              <span class="mt-1 text-karaage-gold">▸</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brown-900 text-cream-200 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">🍗</span>
+          <div>
+            <p class="font-serif font-bold text-cream-100">自由から揚げ財団</p>
+            <p class="text-sm text-brown-600">自由から揚げ運動</p>
+          </div>
+        </div>
+        <div class="flex gap-8 text-sm text-brown-500">
+          <a href="#freedoms" class="hover:text-karaage-amber transition-colors">四つの自由</a>
+          <a href="#manifesto" class="hover:text-karaage-amber transition-colors">宣言</a>
+          <a href="#about" class="hover:text-karaage-amber transition-colors">概要</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-brown-800 text-center text-sm text-brown-600">
+        <p>
+          自由から揚げ財団のコンテンツは、
+          <a href="https://www.gnu.org/licenses/copyleft.html" class="text-karaage-amber hover:underline" target="_blank" rel="noopener">
+            コピーレフト
+          </a>
+          の精神のもと自由に共有できます。
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

@@ -1,0 +1,21 @@
+{
+  "name": "fkf",
+  "version": "1.0.0",
+  "description": "Free Karaage Foundation",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyber-gene/fkf.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.1.5",
+    "tailwindcss": "^3.4.19"
+  }
+}
