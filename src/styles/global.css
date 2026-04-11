@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-50: #fefdf8;
+  --color-cream-100: #fdf8ed;
+  --color-cream-200: #f9edd4;
+
+  --color-karaage-gold: #c8860a;
+  --color-karaage-amber: #e6a020;
+  --color-karaage-light: #f5c842;
+  --color-karaage-dark: #7a4f08;
+
+  --color-brown-900: #2c1a06;
+  --color-brown-800: #3d2509;
+  --color-brown-700: #5a3810;
+  --color-brown-600: #7a5020;
+
+  --font-family-sans: 'Noto Sans JP', system-ui, sans-serif;
+  --font-family-serif: 'Noto Serif JP', Georgia, serif;
+}
