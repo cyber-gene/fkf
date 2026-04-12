@@ -45,6 +45,7 @@ Tailwind の `@theme` で定義（`src/styles/global.css`）。
 - 改修作業は必ず専用の開発ブランチを作成して行う（例: `feature/add-section`、`fix/layout-bug`）
 - 作業完了後は GitHub に PR を作成する（`gh pr create` を使用）
 - PR は main ブランチへのマージを対象とする
+- **ドキュメントのみの変更**（README.md、CLAUDE.md など）はコミットメッセージに `[skip ci]` を付ける（Netlify の不要なビルドを防ぐため）
 
 ## コンテンツ方針
 
