@@ -27,7 +27,8 @@ const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
         <script define:vars={{ gaMeasurementId }}>
           window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
+          function gtag() { window.dataLayer.push(arguments); }
+          window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', gaMeasurementId);
         </script>
