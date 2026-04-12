@@ -1,3 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text y=".9em" font-size="90">🍗</text>
+  <!-- から揚げのメインの形：不規則な丸みのある塊 -->
+  <path d="M28,18 C16,22 8,34 8,48 C8,62 16,76 28,83 C40,90 56,90 67,84 C78,78 85,65 85,52 C85,38 77,24 65,18 C53,12 40,14 28,18 Z" fill="#c87a0c"/>
+
+  <!-- 揚げ衣の明るい部分（ハイライト） -->
+  <ellipse cx="40" cy="33" rx="13" ry="9" fill="#e8a822" opacity="0.75"/>
+  <ellipse cx="64" cy="52" rx="10" ry="8" fill="#e8a822" opacity="0.65"/>
+  <ellipse cx="38" cy="65" rx="9" ry="7" fill="#e8a822" opacity="0.60"/>
+
+  <!-- 揚げ衣の焦げ目（暗い斑点） -->
+  <circle cx="57" cy="28" r="5" fill="#7a4606" opacity="0.45"/>
+  <circle cx="28" cy="52" r="4" fill="#7a4606" opacity="0.40"/>
+  <circle cx="70" cy="38" r="4" fill="#7a4606" opacity="0.40"/>
+  <circle cx="52" cy="74" r="5" fill="#7a4606" opacity="0.40"/>
+  <circle cx="72" cy="68" r="3" fill="#7a4606" opacity="0.35"/>
 </svg>
