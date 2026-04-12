@@ -39,6 +39,13 @@ Tailwind の `@theme` で定義（`src/styles/global.css`）。
 | `karaage-gold/amber/light/dark` | アクセントカラー |
 | `brown-600/700/800/900` | テキスト・ダーク系 |
 
+## Git ワークフロー
+
+- **main ブランチへの直接コミットは禁止**
+- 改修作業は必ず専用の開発ブランチを作成して行う（例: `feature/add-section`、`fix/layout-bug`）
+- 作業完了後は GitHub に PR を作成する（`gh pr create` を使用）
+- PR は main ブランチへのマージを対象とする
+
 ## コンテンツ方針
 
 - 表記は日本語「自由から揚げ財団」に統一（"Free Karaage Foundation" は使わない）
