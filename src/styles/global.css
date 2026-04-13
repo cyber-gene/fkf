@@ -15,8 +15,8 @@
   --color-brown-700: #5a3810;
   --color-brown-600: #7a5020;
 
-  --font-family-sans: 'Noto Sans JP', system-ui, sans-serif;
-  --font-family-serif: 'Noto Serif JP', Georgia, serif;
+  --font-family-sans: 'BIZ UDPGothic', system-ui, sans-serif;
+  --font-family-serif: 'BIZ UDPMincho', Georgia, serif;
 }
 
 /* 長い単語や文字列のはみ出し防止 */
