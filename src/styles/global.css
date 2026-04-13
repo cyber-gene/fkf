@@ -18,3 +18,12 @@
   --font-family-sans: 'Noto Sans JP', system-ui, sans-serif;
   --font-family-serif: 'Noto Serif JP', Georgia, serif;
 }
+
+/* 長い単語や文字列のはみ出し防止 */
+:root {
+  overflow-wrap: break-word;
+}
+
+h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
