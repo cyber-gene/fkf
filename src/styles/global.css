@@ -19,7 +19,7 @@
   --font-family-serif: 'Noto Serif JP', Georgia, serif;
 }
 
-/* 日本語の改行ルール */
+/* 長い単語や文字列のはみ出し防止 */
 :root {
   overflow-wrap: break-word;
 }
