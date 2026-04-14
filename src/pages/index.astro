@@ -1,24 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="自由からあげ財団">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-cream-100/90 backdrop-blur-sm border-b border-cream-200">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <img src="/favicon.svg" alt="からあげ" class="w-7 h-7 object-contain" />
-        <span class="font-serif font-bold text-brown-900 text-sm tracking-wide">自由からあげ財団</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown-700">
-        <a href="#freedoms" class="hover:text-karaage-gold transition-colors">4つの自由</a>
-        <a href="#manifesto" class="hover:text-karaage-gold transition-colors">宣言</a>
-        <a href="#about" class="hover:text-karaage-gold transition-colors">概要</a>
-        <a href="#join" class="bg-karaage-gold text-white px-4 py-2 rounded-full hover:bg-karaage-dark transition-colors">参加する</a>
-      </div>
-    </div>
-  </nav>
+  <Header />
 
   <!-- Hero -->
   <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 text-center relative overflow-hidden">
@@ -253,41 +241,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-brown-900 text-cream-200 py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="flex items-center gap-3">
-          <img src="/favicon.svg" alt="からあげ" class="w-9 h-9 object-contain" />
-          <div>
-            <p class="font-serif font-bold text-cream-100">自由からあげ財団</p>
-            <p class="text-sm text-brown-600">食卓の自由を守る非営利団体</p>
-          </div>
-        </div>
-        <div class="flex gap-8 text-sm text-brown-500">
-          <a href="#freedoms" class="hover:text-karaage-amber transition-colors">4つの自由</a>
-          <a href="#manifesto" class="hover:text-karaage-amber transition-colors">宣言</a>
-          <a href="#about" class="hover:text-karaage-amber transition-colors">概要</a>
-        </div>
-      </div>
-      <div class="mt-8 pt-8 border-t border-brown-800 text-center text-sm text-brown-600 space-y-2">
-        <p>
-          自由からあげ財団のコンテンツは、
-          <a href="https://www.gnu.org/licenses/copyleft.html" class="text-karaage-amber hover:underline" target="_blank" rel="noopener">
-            コピーレフト
-          </a>
-          の精神のもと自由に共有できます。
-        </p>
-        <p>
-          ソースコードは
-          <a href="https://github.com/cyber-gene/fkf" class="text-karaage-amber hover:underline" target="_blank" rel="noopener">
-            GitHub
-          </a>
-          にて AGPL-3.0 のもと公開しています。
-        </p>
-      </div>
-    </div>
-  </footer>
+  <Footer />
 
 </Layout>
 

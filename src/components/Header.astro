@@ -1,0 +1,27 @@
+---
+const navLinks = [
+  { href: '/#freedoms', label: '4つの自由' },
+  { href: '/#manifesto', label: '宣言' },
+  { href: '/#about', label: '概要' },
+  { href: '/#join', label: '参加する', isCta: true },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream-100/90 backdrop-blur-sm border-b border-cream-200">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/favicon.svg" alt="からあげ" class="w-7 h-7 object-contain" />
+      <span class="font-serif font-bold text-brown-900 text-sm tracking-wide">自由からあげ財団</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown-700">
+      {navLinks.map(({ href, label, isCta }) => (
+        <a
+          href={href}
+          class={isCta
+            ? 'bg-karaage-gold text-white px-4 py-2 rounded-full hover:bg-karaage-dark transition-colors'
+            : 'hover:text-karaage-gold transition-colors'}
+        >{label}</a>
+      ))}
+    </div>
+  </div>
+</nav>
