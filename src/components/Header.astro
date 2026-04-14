@@ -3,6 +3,7 @@ const navLinks = [
   { href: '/#freedoms', label: '4つの自由' },
   { href: '/#manifesto', label: '宣言' },
   { href: '/#about', label: '概要' },
+  { href: '/#join', label: '参加する', isCta: true },
 ];
 ---
 
@@ -13,10 +14,14 @@ const navLinks = [
       <span class="font-serif font-bold text-brown-900 text-sm tracking-wide">自由からあげ財団</span>
     </a>
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown-700">
-      {navLinks.map(({ href, label }) => (
-        <a href={href} class="hover:text-karaage-gold transition-colors">{label}</a>
+      {navLinks.map(({ href, label, isCta }) => (
+        <a
+          href={href}
+          class={isCta
+            ? 'bg-karaage-gold text-white px-4 py-2 rounded-full hover:bg-karaage-dark transition-colors'
+            : 'hover:text-karaage-gold transition-colors'}
+        >{label}</a>
       ))}
-      <a href="/#join" class="bg-karaage-gold text-white px-4 py-2 rounded-full hover:bg-karaage-dark transition-colors">参加する</a>
     </div>
   </div>
 </nav>
