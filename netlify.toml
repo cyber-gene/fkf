@@ -4,3 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = "<https://free-karaage.foundation/sitemap-index.xml>; rel=\"sitemap\""
