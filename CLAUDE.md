@@ -47,7 +47,7 @@ Tailwind の `@theme` で定義（`src/styles/global.css`）。
 - PR は main ブランチへのマージを対象とする
 - **ドキュメントのみの変更**（README.md、CLAUDE.md など）はコミットメッセージに `[skip ci]` を付ける（Netlify の不要なビルドを防ぐため）
 
-### PR作成前の Codex コードレビューループ
+### PR 作成前の Codex コードレビューループ
 
 実装・コミット完了後、PR を作成する前に必ず以下のループを実行する。
 
