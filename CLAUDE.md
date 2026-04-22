@@ -43,9 +43,21 @@ Tailwind の `@theme` で定義（`src/styles/global.css`）。
 
 - **main ブランチへの直接コミットは禁止**
 - 改修作業は必ず専用の開発ブランチを作成して行う（例: `feature/add-section`、`fix/layout-bug`）
-- 作業完了後は GitHub に PR を作成する（`gh pr create` を使用）
+- 作業完了後は以下の **Codex レビューループ** を経てから PR を作成する
 - PR は main ブランチへのマージを対象とする
 - **ドキュメントのみの変更**（README.md、CLAUDE.md など）はコミットメッセージに `[skip ci]` を付ける（Netlify の不要なビルドを防ぐため）
+
+### PR作成前の Codex コードレビューループ
+
+実装・コミット完了後、PR を作成する前に必ず以下のループを実行する。
+
+1. `codex review --base main` を実行してレビュー結果を取得する
+2. 指摘事項・改善提案がある場合は修正してコミットする
+3. 修正後、再度 `codex review --base main` を実行する
+4. Codex の指摘が「問題なし」となるまで 2〜3 を繰り返す
+5. **Codex・Claude の双方がOKと判断した時点で** `gh pr create` を実行する
+
+> `gh pr create` の直前にも PreToolUse フックとして自動でレビューが走る（最終確認）。
 
 ## コンテンツ方針
 
