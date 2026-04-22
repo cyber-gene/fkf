@@ -57,7 +57,7 @@ Tailwind の `@theme` で定義（`src/styles/global.css`）。
 4. Codex の指摘が「問題なし」となるまで 2〜3 を繰り返す
 5. **Codex・Claude の双方が OK と判断した時点で** `gh pr create` を実行する
 
-> `gh pr create` の直前にも PreToolUse フックとして自動でレビューが走る（最終確認）。
+> 補足: `gh pr create` 直前の自動レビューは、このリポジトリの標準機能ではない。PreToolUse フックを使う場合は各自のローカル設定に依存するため、未設定の環境では `codex review --base main` を最終確認として扱うこと。
 
 ## コンテンツ方針
 
