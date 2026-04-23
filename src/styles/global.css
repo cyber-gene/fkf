@@ -20,7 +20,7 @@
 }
 
 /* 長い単語や文字列のはみ出し防止 */
-:root {
+body {
   overflow-wrap: break-word;
 }
 
