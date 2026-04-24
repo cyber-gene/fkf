@@ -1,0 +1,87 @@
+---
+// Cookie 同意バナー — 初回訪問時に表示し、同意後のみ GA を読み込む
+interface Props {
+  gaMeasurementId?: string;
+}
+const { gaMeasurementId } = Astro.props;
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-labelledby="cookie-banner-title"
+  aria-modal="false"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden bg-brown-900/95 backdrop-blur-sm border-t-2 border-karaage-gold/60 px-4 py-5 shadow-2xl"
+>
+  <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div class="flex-1 text-sm text-cream-100 leading-relaxed">
+      <p id="cookie-banner-title" class="font-bold text-karaage-light mb-1">🍗 Cookie についてのお知らせ</p>
+      <p>
+        当サイトでは、アクセス解析のために Google Analytics を使用しています。
+        同意いただける場合は「同意する」をクリックしてください。
+        <a href="/privacy" class="underline text-karaage-amber hover:text-karaage-light transition-colors">プライバシーポリシー</a>
+      </p>
+    </div>
+    <div class="flex gap-3 shrink-0">
+      <button
+        id="cookie-decline"
+        class="px-4 py-2 text-sm rounded border border-cream-200/40 text-cream-200 hover:bg-cream-200/10 transition-colors cursor-pointer"
+      >
+        拒否する
+      </button>
+      <button
+        id="cookie-accept"
+        class="px-4 py-2 text-sm rounded bg-karaage-gold hover:bg-karaage-amber text-white font-bold transition-colors cursor-pointer"
+      >
+        同意する
+      </button>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ gaMeasurementId }}>
+  const STORAGE_KEY = 'ga_consent';
+  const banner = document.getElementById('cookie-banner');
+
+  function loadGA() {
+    if (!gaMeasurementId) return;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', gaMeasurementId);
+  }
+
+  function hideBanner() {
+    if (banner) banner.classList.add('hidden');
+  }
+
+  function showBanner() {
+    if (banner) banner.classList.remove('hidden');
+  }
+
+  // 既存の同意状態を確認
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored === 'granted') {
+    loadGA();
+  } else if (stored !== 'denied') {
+    // 未決定の場合のみバナーを表示
+    showBanner();
+  }
+
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    localStorage.setItem(STORAGE_KEY, 'granted');
+    hideBanner();
+    loadGA();
+  });
+
+  document.getElementById('cookie-decline')?.addEventListener('click', () => {
+    localStorage.setItem(STORAGE_KEY, 'denied');
+    hideBanner();
+  });
+</script>
