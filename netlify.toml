@@ -9,3 +9,8 @@
   for = "/*"
   [headers.values]
     Link = "<https://free-karaage.foundation/sitemap-index.xml>; rel=\"sitemap\""
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
