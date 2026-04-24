@@ -15,7 +15,10 @@ const { gaMeasurementId } = Astro.props;
 >
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
     <div class="flex-1 text-sm text-cream-100 leading-relaxed">
-      <p id="cookie-banner-title" class="font-bold text-karaage-light mb-1">🍗 Cookie についてのお知らせ</p>
+      <p id="cookie-banner-title" class="font-bold text-karaage-light mb-1 flex items-center gap-2">
+        <img src="/favicon.svg" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />
+        Cookie についてのお知らせ
+      </p>
       <p>
         当サイトでは、アクセス解析のために Google Analytics を使用しています。
         同意いただける場合は「同意する」をクリックしてください。
