@@ -8,17 +8,16 @@ const { gaMeasurementId } = Astro.props;
 
 <div
   id="cookie-banner"
-  role="dialog"
+  role="region"
   aria-labelledby="cookie-banner-title"
-  aria-modal="false"
   class="fixed bottom-0 left-0 right-0 z-50 hidden bg-brown-900/95 backdrop-blur-sm border-t-2 border-karaage-gold/60 px-4 py-5 shadow-2xl"
 >
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
     <div class="flex-1 text-sm text-cream-100 leading-relaxed">
-      <p id="cookie-banner-title" class="font-bold text-karaage-light mb-1 flex items-center gap-2">
+      <h2 id="cookie-banner-title" class="font-bold text-karaage-light mb-1 flex items-center gap-2">
         <img src="/favicon.svg" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />
         Cookie についてのお知らせ
-      </p>
+      </h2>
       <p>
         当サイトでは、アクセス解析のために Google Analytics を使用しています。
         同意いただける場合は「同意する」をクリックしてください。
@@ -28,12 +27,14 @@ const { gaMeasurementId } = Astro.props;
     <div class="flex gap-3 shrink-0">
       <button
         id="cookie-decline"
+        type="button"
         class="px-4 py-2 text-sm rounded border border-cream-200/40 text-cream-200 hover:bg-cream-200/10 transition-colors cursor-pointer"
       >
         拒否する
       </button>
       <button
         id="cookie-accept"
+        type="button"
         class="px-4 py-2 text-sm rounded bg-karaage-gold hover:bg-karaage-amber text-white font-bold transition-colors cursor-pointer"
       >
         同意する

@@ -49,6 +49,6 @@ const ogImageURL = new URL(ogImage, Astro.site);
   </head>
   <body class="bg-cream-100 text-brown-900 font-sans antialiased">
     <slot />
-    <CookieBanner gaMeasurementId={gaMeasurementId} />
+    {gaMeasurementId && <CookieBanner gaMeasurementId={gaMeasurementId} />}
   </body>
 </html>
