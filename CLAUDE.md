@@ -33,11 +33,11 @@ netlify.toml             # Node.js 22 / ビルド設定
 
 Tailwind の `@theme` で定義（`src/styles/global.css`）。
 
-| トークン | 用途 |
-|---|---|
-| `cream-50/100/200` | 背景・ライト系 |
-| `karaage-gold/amber/light/dark` | アクセントカラー |
-| `brown-600/700/800/900` | テキスト・ダーク系 |
+| トークン                        | 用途               |
+| ------------------------------- | ------------------ |
+| `cream-50/100/200`              | 背景・ライト系     |
+| `karaage-gold/amber/light/dark` | アクセントカラー   |
+| `brown-600/700/800/900`         | テキスト・ダーク系 |
 
 ## Git ワークフロー
 
