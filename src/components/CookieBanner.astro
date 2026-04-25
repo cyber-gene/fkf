@@ -1,9 +1,9 @@
 ---
 // Cookie 同意バナー — 初回訪問時に表示し、同意後のみ GA を読み込む
 interface Props {
-  gaMeasurementId?: string;
+  gaMeasurementId?: string
 }
-const { gaMeasurementId } = Astro.props;
+const { gaMeasurementId } = Astro.props
 ---
 
 <div
@@ -14,14 +14,21 @@ const { gaMeasurementId } = Astro.props;
 >
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
     <div class="flex-1 text-sm text-cream-100 leading-relaxed">
-      <h2 id="cookie-banner-title" class="font-bold text-karaage-light mb-1 flex items-center gap-2">
+      <h2
+        id="cookie-banner-title"
+        class="font-bold text-karaage-light mb-1 flex items-center gap-2"
+      >
         <img src="/favicon.svg" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />
         Cookie についてのお知らせ
       </h2>
       <p>
         当サイトでは、アクセス解析のために Google Analytics を使用しています。
         同意いただける場合は「同意する」をクリックしてください。
-        <a href="/privacy" class="underline text-karaage-amber hover:text-karaage-light transition-colors">プライバシーポリシー</a>
+        <a
+          href="/privacy"
+          class="underline text-karaage-amber hover:text-karaage-light transition-colors"
+          >プライバシーポリシー</a
+        >
       </p>
     </div>
     <div class="flex gap-3 shrink-0">
@@ -44,65 +51,77 @@ const { gaMeasurementId } = Astro.props;
 </div>
 
 <script define:vars={{ gaMeasurementId }}>
-  const STORAGE_KEY = 'ga_consent';
-  const GA_SCRIPT_ID = 'ga-gtag-script';
-  const banner = document.getElementById('cookie-banner');
-  let gaLoaded = false;
+  const STORAGE_KEY = 'ga_consent'
+  const GA_SCRIPT_ID = 'ga-gtag-script'
+  const banner = document.getElementById('cookie-banner')
+  let gaLoaded = false
 
   function loadGA() {
-    if (!gaMeasurementId || gaLoaded) return;
+    if (!gaMeasurementId || gaLoaded) return
 
     if (!document.getElementById(GA_SCRIPT_ID)) {
-      const script = document.createElement('script');
-      script.id = GA_SCRIPT_ID;
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
-      document.head.appendChild(script);
+      const script = document.createElement('script')
+      script.id = GA_SCRIPT_ID
+      script.async = true
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
+      document.head.appendChild(script)
     }
 
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-    window.gtag('js', new Date());
-    window.gtag('config', gaMeasurementId);
-    gaLoaded = true;
+    window.dataLayer = window.dataLayer || []
+    window.gtag =
+      window.gtag ||
+      function () {
+        window.dataLayer.push(arguments)
+      }
+    window.gtag('js', new Date())
+    window.gtag('config', gaMeasurementId)
+    gaLoaded = true
   }
 
   function hideBanner() {
-    if (banner) banner.classList.add('hidden');
+    if (banner) banner.classList.add('hidden')
   }
 
   function showBanner() {
-    if (banner) banner.classList.remove('hidden');
+    if (banner) banner.classList.remove('hidden')
   }
 
   function getConsent() {
-    try { return localStorage.getItem(STORAGE_KEY); } catch { return null; }
+    try {
+      return localStorage.getItem(STORAGE_KEY)
+    } catch {
+      return null
+    }
   }
 
   function saveConsent(value) {
-    try { localStorage.setItem(STORAGE_KEY, value); } catch { /* ignore */ }
+    try {
+      localStorage.setItem(STORAGE_KEY, value)
+    } catch {
+      /* ignore */
+    }
   }
 
   // GA が設定されていない場合は何もしない
   if (gaMeasurementId) {
     // 既存の同意状態を確認
-    const stored = getConsent();
+    const stored = getConsent()
     if (stored === 'granted') {
-      loadGA();
+      loadGA()
     } else if (stored !== 'denied') {
       // 未決定の場合のみバナーを表示
-      showBanner();
+      showBanner()
     }
 
     document.getElementById('cookie-accept')?.addEventListener('click', () => {
-      saveConsent('granted');
-      hideBanner();
-      loadGA();
-    });
+      saveConsent('granted')
+      hideBanner()
+      loadGA()
+    })
 
     document.getElementById('cookie-decline')?.addEventListener('click', () => {
-      saveConsent('denied');
-      hideBanner();
-    });
+      saveConsent('denied')
+      hideBanner()
+    })
   }
 </script>

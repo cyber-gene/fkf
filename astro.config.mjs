@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from 'astro/config'
+import tailwindcss from '@tailwindcss/vite'
+import sitemap from '@astrojs/sitemap'
 
 export default defineConfig({
   site: 'https://free-karaage.foundation',
@@ -8,4 +8,4 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-});
+})
