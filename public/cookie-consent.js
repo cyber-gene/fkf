@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   const STORAGE_KEY = 'ga_consent'
   const GA_SCRIPT_ID = 'ga-gtag-script'
   const banner = document.getElementById('cookie-banner')
