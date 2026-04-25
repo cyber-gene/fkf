@@ -1,5 +1,3 @@
 dist/
 node_modules/
 .astro/
-# prettier-plugin-astro が define:vars 内の arguments キーワードを解析できないため除外
-src/layouts/Layout.astro

@@ -1,17 +1,21 @@
 ---
-import '../styles/global.css';
-import CookieBanner from '../components/CookieBanner.astro';
+import '../styles/global.css'
+import CookieBanner from '../components/CookieBanner.astro'
 
 interface Props {
-  title: string;
-  description?: string;
-  ogImage?: string;
+  title: string
+  description?: string
+  ogImage?: string
 }
 
-const { title, description = '自由からあげ財団 — 自由からあげ運動を推進する非営利団体', ogImage = '/og-image.png' } = Astro.props;
-const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = new URL(ogImage, Astro.site);
+const {
+  title,
+  description = '自由からあげ財団 — 自由からあげ運動を推進する非営利団体',
+  ogImage = '/og-image.png',
+} = Astro.props
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const ogImageURL = new URL(ogImage, Astro.site)
 ---
 
 <!doctype html>
@@ -43,7 +47,10 @@ const ogImageURL = new URL(ogImage, Astro.site);
     <meta name="twitter:image:alt" content={title} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
   <body class="bg-cream-100 text-brown-900 font-sans antialiased">
