@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git+https://github.com/cyber-gene/fkf.git"
   },
+  "engines": {
+    "node": "^20.19 || ^22.13 || >=24"
+  },
   "license": "AGPL-3.0-only",
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
