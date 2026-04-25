@@ -10,6 +10,7 @@ const { gaMeasurementId } = Astro.props
   id="cookie-banner"
   role="region"
   aria-labelledby="cookie-banner-title"
+  data-ga-id={gaMeasurementId}
   class="fixed bottom-0 left-0 right-0 z-50 hidden bg-brown-900/95 backdrop-blur-sm border-t-2 border-karaage-gold/60 px-4 py-5 shadow-2xl"
 >
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -50,78 +51,4 @@ const { gaMeasurementId } = Astro.props
   </div>
 </div>
 
-<script define:vars={{ gaMeasurementId }}>
-  const STORAGE_KEY = 'ga_consent'
-  const GA_SCRIPT_ID = 'ga-gtag-script'
-  const banner = document.getElementById('cookie-banner')
-  let gaLoaded = false
-
-  function loadGA() {
-    if (!gaMeasurementId || gaLoaded) return
-
-    if (!document.getElementById(GA_SCRIPT_ID)) {
-      const script = document.createElement('script')
-      script.id = GA_SCRIPT_ID
-      script.async = true
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
-      document.head.appendChild(script)
-    }
-
-    window.dataLayer = window.dataLayer || []
-    window.gtag =
-      window.gtag ||
-      function () {
-        window.dataLayer.push(arguments)
-      }
-    window.gtag('js', new Date())
-    window.gtag('config', gaMeasurementId)
-    gaLoaded = true
-  }
-
-  function hideBanner() {
-    if (banner) banner.classList.add('hidden')
-  }
-
-  function showBanner() {
-    if (banner) banner.classList.remove('hidden')
-  }
-
-  function getConsent() {
-    try {
-      return localStorage.getItem(STORAGE_KEY)
-    } catch {
-      return null
-    }
-  }
-
-  function saveConsent(value) {
-    try {
-      localStorage.setItem(STORAGE_KEY, value)
-    } catch {
-      /* ignore */
-    }
-  }
-
-  // GA が設定されていない場合は何もしない
-  if (gaMeasurementId) {
-    // 既存の同意状態を確認
-    const stored = getConsent()
-    if (stored === 'granted') {
-      loadGA()
-    } else if (stored !== 'denied') {
-      // 未決定の場合のみバナーを表示
-      showBanner()
-    }
-
-    document.getElementById('cookie-accept')?.addEventListener('click', () => {
-      saveConsent('granted')
-      hideBanner()
-      loadGA()
-    })
-
-    document.getElementById('cookie-decline')?.addEventListener('click', () => {
-      saveConsent('denied')
-      hideBanner()
-    })
-  }
-</script>
+<script src="/cookie-consent.js" defer></script>

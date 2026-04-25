@@ -24,6 +24,10 @@ body {
   overflow-wrap: break-word;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h2,
 h3,
 h4,
